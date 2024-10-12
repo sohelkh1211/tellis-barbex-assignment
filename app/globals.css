@@ -15,27 +15,35 @@ body {
   font-family: "Arima", system-ui;
 }
 
-
+.background-section {
+  background-image: url('./assets/guy-barbershop.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
 @media (min-width: 1024px) and (max-width: 1280px) {
   .custom-button {
     background-color: #b48e40;
-    padding: 1rem 2rem; /* Matching Tailwind's px-8 py-4 */
+    padding: 1rem 2rem;
+    /* Matching Tailwind's px-8 py-4 */
     font-weight: bold;
     position: relative;
     z-index: 1;
     overflow: hidden;
-    color: white; /* Ensure text color is applied correctly */
+    color: white;
+    /* Ensure text color is applied correctly */
   }
 
   .custom-button:hover {
-    color: #b48e40; /* Change text color on hover */
+    color: #b48e40;
+    /* Change text color on hover */
   }
-  
+
   button.grow_ellipse::after {
     content: "";
     position: absolute;
-    background: #fff; /* White ellipse background */
+    background: #fff;
+    /* White ellipse background */
     color: #b48e40;
     z-index: -1;
     border-radius: 50%;
@@ -47,7 +55,7 @@ body {
     transform: scale(0, 0);
     transition: all 1s ease-in;
   }
-  
+
   button.grow_ellipse:hover::after {
     transform: scale(1, 1);
     color: #b48e40;
