@@ -14,11 +14,23 @@ import user2 from './assets/user2.png';
 import blog1 from './assets/blog1.png';
 import blog2 from './assets/blog2.png';
 import blog3 from './assets/blog3.png';
+import footer1 from './assets/footer1.png';
+import footer2 from './assets/footer2.png';
+import footer3 from './assets/footer3.png';
+import footer4 from './assets/footer4.png';
+import footer5 from './assets/footer5.png';
 
 import SearchIcon from '@mui/icons-material/Search';
 import DoneSharpIcon from '@mui/icons-material/DoneSharp';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHandPointer } from "@fortawesome/free-solid-svg-icons";
+import { faBehance } from "@fortawesome/free-brands-svg-icons";
+import { faSnapchat } from "@fortawesome/free-brands-svg-icons";
+
+// import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import Menu from "./components/Menu";
 import Section1 from "./components/Section1";
@@ -60,6 +72,20 @@ export default function Home() {
     label: 'Lather Shave',
     date: '21 June, 2022',
     text: 'Customising your shave is Fun and easy'
+  }];
+
+  const images = [{
+    image: footer1
+  }, {
+    image: footer2
+  }, {
+    image: footer3
+  }, {
+    image: footer4
+  }, {
+    image: footer5
+  }, {
+    image: about1
   }];
 
   return (
@@ -239,6 +265,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Blogs and News */}
       <section className="flex flex-col">
         <p className="text-[#b48e40] font-bold w-fit mx-auto text-[20px]">Blog And Article</p>
         <h1 className="font-bold sm:text-[3rem] xs:text-[1.5rem] w-fit mx-auto">Read Our Blog and News</h1>
@@ -246,8 +273,8 @@ export default function Home() {
         <div className="flex flex-wrap gap-y-4 mt-10 gap-x-4 lg:w-fit md:w-[42rem] xs:w-[20rem] mx-auto">
 
           {blogs.map((blog, blog_index) => (
-            <div key={`blog_${blog_index+1}`} className="flex flex-col pb-8 border border-slate-400">
-              <Image src={blog.image} alt={`blog_${blog_index+1}`} className="w-[20rem] cursor-pointer" />
+            <div key={`blog_${blog_index + 1}`} className="flex flex-col pb-8 border border-slate-400">
+              <Image src={blog.image} alt={`blog_${blog_index + 1}`} className="w-[20rem] cursor-pointer" />
 
               <div className="flex items-center gap-x-2 mt-8 w-[16rem] mx-auto">
                 <button className="px-2.5 py-1 bg-[#b48e40] text-white font-bold">{blog.label}</button>
@@ -263,6 +290,53 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/* Footer images */}
+      <section className="flex mt-24">
+        <div className="flex flex-wrap gap-2 lg:w-[82%] md:w-[66%] mx-auto">
+          {images.map((image, image_index) => (
+            <Image key={`image_${image_index}`} src={image.image} alt={`image_${image_index}`} className="size-[10rem] bg-cover mx-auto" />
+          ))}
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="flex flex-col -mt-16 bg-black">
+        <div className="flex items-center lg:flex-row xs:flex-col gap-x-40 gap-y-20 mt-40 w-fit mx-auto">
+
+          <div className="flex flex-col gap-y-6">
+            <Image src={logo} alt="logo" className="w-[150px] lg:mx-0 xs:mx-auto" />
+
+            <ul className="list-none flex flex-wrap gap-x-4 sm:text-[16px] xs:text-[14px] text-white hover:text-[#b48e40]">
+              <li className="mx-auto">Trend Haircut</li>
+              <li className="mx-auto">Hair Washing</li>
+              <li className="mx-auto">Hair Coloring</li>
+              <li className="mx-auto">Facial Hair Trim</li>
+            </ul>
+          </div>
+
+          <div className="flex w-fit h-fit">
+            <input type="email" placeholder="Email Address" className="outline-none text-white sm:pl-6 sm:pr-40 sm:py-4 xs:pl-3 xs:pr-16 xs:py-2 bg-transparent caret-white border border-[#b48e40]" />
+            <div className="sm:size-[3.6rem] xs:size-[2.56rem] bg-[#b48e40] border border-[#b48e40] cursor-pointer">
+              <Link href="/"><FontAwesomeIcon icon={faHandPointer} className="sm:p-5 xs:p-3 z-20 text-white" /></Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex lg:flex-row xs:flex-col gap-y-8 mt-20 lg:px-14 py-10 border-t-[1px] border-slate-100">
+          <p className="font-serif text-white lg:mx-0 xs:mx-auto text-center">Copyright © 2022 <span className="text-[#b48e40]">Mohammed Sohel</span> Website by Barbex</p>
+
+          <div className="flex gap-x-6 items-center w-fit lg:ml-[35%] lg:mx-0 xs:mx-auto">
+            <i className="pi pi-facebook text-white hover:text-[#b48e40] cursor-pointer" />
+            <FontAwesomeIcon icon={faBehance} className="text-white w-[20px] hover:text-[#b48e40] cursor-pointer"/>
+            <TwitterIcon className="text-white w-[20px] hover:text-[#b48e40] cursor-pointer" />
+            <i className="pi pi-linkedin  text-white hover:text-[#b48e40] cursor-pointer" />
+            <FontAwesomeIcon icon={faSnapchat} className="text-white w-[20px] hover:text-[#b48e40] cursor-pointer" />
+            <i className="pi pi-pinterest text-white hover:text-[#b48e40] cursor-pointer" />
+            <i className="pi pi-youtube text-white hover:text-[#b48e40] cursor-pointer" />
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
