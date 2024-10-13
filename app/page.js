@@ -100,7 +100,7 @@ export default function Home() {
           <li className="hover:text-[#b48e40] cursor-pointer font-bold"> <Link href="/">Blog</Link></li>
           <li className="hover:text-[#b48e40] cursor-pointer font-bold"> <Link href="/">Contact</Link></li>
           <SearchIcon className="text-white cursor-pointer" />
-          <button className="grow_ellipse custom-button">BOOKING NOW <span className="font-bold">{'>>'}</span></button>
+          <button className="grow_ellipse custom-button">BOOKING NOW <span className="font-bold">{" >> "}</span></button>
         </ul>
 
         <Menu />
@@ -118,9 +118,9 @@ export default function Home() {
       <section className="flex py-36 w-full">
         <div className="flex lg:flex-row xs:flex-col md:gap-x-44 xs:gap-y-40 pb-[6.5rem] mx-auto justify-center items-center border-none border-black">
           <div className="flex justify-center xs:pr-[25%] sm:pr-0">
-            <Image src={about1} className="flex sm:w-[22rem] xs:w-[12rem]" />
-            <Image src={about2} className="absolute flex sm:w-[9rem] xs:w-[7rem] sm:ml-[26rem] xs:ml-[16rem] sm:mt-[2rem] xs:mt-[1rem]" />
-            <Image src={about3} className="absolute flex sm:w-[20rem] xs:w-[10rem] sm:ml-[17rem] xs:ml-[10rem] sm:mt-[16rem] xs:mt-[10rem] sm:border-[15px] xs:border-[10px] border-white" />
+            <Image src={about1} alt="about1" className="flex sm:w-[22rem] xs:w-[12rem]" />
+            <Image src={about2} alt="about2" className="absolute flex sm:w-[9rem] xs:w-[7rem] sm:ml-[26rem] xs:ml-[16rem] sm:mt-[2rem] xs:mt-[1rem]" />
+            <Image src={about3} alt className="absolute flex sm:w-[20rem] xs:w-[10rem] sm:ml-[17rem] xs:ml-[10rem] sm:mt-[16rem] xs:mt-[10rem] sm:border-[15px] xs:border-[10px] border-white" />
           </div>
 
           <div className="flex flex-col w-fit mx-auto">
@@ -131,7 +131,7 @@ export default function Home() {
 
             <p className="sm:w-[30rem] xs:w-[20rem] mt-6 border-l-[2px] border-[#b48e40] pl-4">We're a leading independent salon in Dubai, offering everything from haircuts to exfoliation</p>
 
-            <button className="font-bold mt-10 w-fit left-0 px-[2rem] py-[1rem] text-white bg-[#b48e40]">READ MORE <span className="font-bold">{'>>'}</span></button>
+            <button className="font-bold mt-10 w-fit left-0 px-[2rem] py-[1rem] text-white bg-[#b48e40]">READ MORE <span className="font-bold">{" >> "}</span></button>
           </div>
 
         </div>
@@ -168,7 +168,7 @@ export default function Home() {
             <p className="">We care about our customers satisfaction</p>
           </div>
 
-          <button className="font-bold mt-10 w-fit left-0 px-[2rem] py-[1rem] text-white bg-[#b48e40]">BOOKING APPOINTMENT <span className="font-bold">{'>>'}</span></button>
+          <button className="font-bold mt-10 w-fit left-0 px-[2rem] py-[1rem] text-white bg-[#b48e40]">BOOKING APPOINTMENT <span className="font-bold">{" >> "}</span></button>
 
         </div>
       </section>
@@ -181,7 +181,7 @@ export default function Home() {
             <p className="text-[#b48e40] w-fit xs:mx-auto lg:mx-0">Booking now</p>
             <h1 className="font-bold sm:text-[45px] xs:text-[1.5rem] w-fit xs:mx-auto lg:mx-0">Book your appointment<br /> online And call our salon</h1>
 
-            <button className="font-bold xs:mx-auto lg:mx-0 mt-10 w-fit left-0 px-[2rem] py-[1rem] text-white bg-[#b48e40]">BOOKING APPOINTMENT <span className="font-bold">{'>>'}</span></button>
+            <button className="font-bold xs:mx-auto lg:mx-0 mt-10 w-fit left-0 px-[2rem] py-[1rem] text-white bg-[#b48e40]">BOOKING APPOINTMENT <span className="font-bold">{" >> "}</span></button>
           </div>
 
           <div className="flex flex-col w-fit xs:mx-auto sm:mx-0 h-fit sm:px-16 sm:py-14 xs:px-12 xs:py-10 border border-slate-400">
@@ -227,7 +227,7 @@ export default function Home() {
             ))}
           </div>
 
-          <button className="font-bold mt-10 w-fit mx-auto px-[2rem] py-[1rem] text-white border border-white">BOOKING APPOINTMENT <span className="font-bold">{'>>'}</span></button>
+          <button className="font-bold mt-10 w-fit mx-auto px-[2rem] py-[1rem] text-white border border-white">BOOKING APPOINTMENT <span className="font-bold">{" >> "}</span></button>
 
         </div>
       </section>
@@ -241,7 +241,7 @@ export default function Home() {
 
             <p className="font-serif sm:w-auto xs:w-[15rem] lg:text-start xs:text-center mx-auto text-slate-600">Barber Trading Style and Proven Strategy to Make a Living</p>
 
-            <button className="font-bold mt-10 w-fit left-0 px-[2rem] py-[1rem] sm:mx-0 xs:mx-auto text-[#b48e40] border border-[#b48e40]">WRITE REVIEW <span className="font-bold">{'>>'}</span></button>
+            <button className="font-bold mt-10 w-fit left-0 px-[2rem] py-[1rem] sm:mx-0 xs:mx-auto text-[#b48e40] border border-[#b48e40]">WRITE REVIEW <span className="font-bold">{" >> "}</span></button>
           </div>
 
           <div className="flex lg:flex-nowrap xs:flex-wrap gap-y-8 gap-x-4">
