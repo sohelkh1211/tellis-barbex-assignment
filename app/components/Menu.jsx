@@ -7,7 +7,7 @@ const Menu = () => {
     const [show, setShow] = useState(false);
     return (
         <>
-            {!show ? <MenuIcon className="xs:flex md:hidden text-white" onClick={() => setShow(!show)} /> : <CloseIcon className="xs:flex md:hidden text-white" onClick={() => setShow(!show)} />}
+            {!show ? <MenuIcon className="xs:flex sm:hidden text-white" onClick={() => setShow(!show)} /> : <CloseIcon className="xs:flex sm:hidden text-white" onClick={() => setShow(!show)} />}
 
             <div className={`xs:absolute md:hidden ${show ? 'flex flex-col' : 'hidden'} bg-white mt-[24.3rem] w-full left-0`}>
                 <ul className="list-none gap-x-8 text-black items-center">
