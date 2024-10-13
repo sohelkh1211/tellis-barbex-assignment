@@ -127,9 +127,9 @@ export default function Home() {
             <p className="text-[#b48e40] text-[20px] font-bold">About us</p>
             <h1 className="font-semibold sm:text-[45px] xs:text-[1.5rem]">Best Haircut Salons<br />  For Men Women</h1>
 
-            <p className="sm:w-[30rem] xs:w-[20rem] mt-6 font-serif">Haircut" is a term used to describe when a person removes the hair on their head. This is done to allow for better access to the part of the body that needs cutting.</p>
+            <p className="sm:w-[30rem] xs:w-[20rem] mt-6 font-serif">Haircut&apos; is a term used to describe when a person removes the hair on their head. This is done to allow for better access to the part of the body that needs cutting.</p>
 
-            <p className="sm:w-[30rem] xs:w-[20rem] mt-6 border-l-[2px] border-[#b48e40] pl-4">We're a leading independent salon in Dubai, offering everything from haircuts to exfoliation</p>
+            <p className="sm:w-[30rem] xs:w-[20rem] mt-6 border-l-[2px] border-[#b48e40] pl-4">We&apos;re a leading independent salon in Dubai, offering everything from haircuts to exfoliation</p>
 
             <button className="font-bold mt-10 w-fit left-0 px-[2rem] py-[1rem] text-white bg-[#b48e40]">READ MORE <span className="font-bold">{" >> "}</span></button>
           </div>
@@ -237,7 +237,7 @@ export default function Home() {
 
           <div className="flex flex-col lg:w-[25rem] mx-auto">
             <p className="text-[#b48e40] font-bold lg:text-start xs:text-center">Testimonial</p>
-            <h1 className="font-bold sm:text-[3rem] xs:text-[2rem] lg:text-start xs:text-center">What Our Customer Say's</h1>
+            <h1 className="font-bold sm:text-[3rem] xs:text-[2rem] lg:text-start xs:text-center">What Our Customer Say&apos;s</h1>
 
             <p className="font-serif sm:w-auto xs:w-[15rem] lg:text-start xs:text-center mx-auto text-slate-600">Barber Trading Style and Proven Strategy to Make a Living</p>
 
