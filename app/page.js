@@ -9,10 +9,16 @@ import about2 from './assets/about-2.png';
 import about3 from './assets/about-3.png';
 import hair_trim from './assets/hair-trim.png';
 import working_hours from './assets/working_hours.png';
+import user1 from './assets/user1.png';
+import user2 from './assets/user2.png';
+import blog1 from './assets/blog1.png';
+import blog2 from './assets/blog2.png';
+import blog3 from './assets/blog3.png';
 
 import SearchIcon from '@mui/icons-material/Search';
 import DoneSharpIcon from '@mui/icons-material/DoneSharp';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 
 import Menu from "./components/Menu";
 import Section1 from "./components/Section1";
@@ -29,6 +35,31 @@ export default function Home() {
   }, {
     day: 'Wednesday',
     time: '6: AM - 4: PM'
+  }];
+
+  const reviews = [{
+    image: user1,
+    name: 'Devin Booker',
+  }, {
+    image: user2,
+    name: 'Michelle Yeoh',
+  }];
+
+  const blogs = [{
+    image: blog1,
+    label: 'Haircutting',
+    date: '30 June, 2022',
+    text: 'We are a Haircut Salon Based in South Melbourne'
+  }, {
+    image: blog2,
+    label: 'Hair Color',
+    date: '25 June, 2022',
+    text: 'Online booking appoitment For Salon, Hair Salon'
+  }, {
+    image: blog3,
+    label: 'Lather Shave',
+    date: '21 June, 2022',
+    text: 'Customising your shave is Fun and easy'
   }];
 
   return (
@@ -171,6 +202,64 @@ export default function Home() {
           </div>
 
           <button className="font-bold mt-10 w-fit mx-auto px-[2rem] py-[1rem] text-white border border-white">BOOKING APPOINTMENT <span className="font-bold">{'>>'}</span></button>
+
+        </div>
+      </section>
+
+      <section className="flex sm:px-14 py-24">
+        <div className="flex lg:flex-row xs:flex-col w-full gap-y-10">
+
+          <div className="flex flex-col lg:w-[25rem] mx-auto">
+            <p className="text-[#b48e40] font-bold lg:text-start xs:text-center">Testimonial</p>
+            <h1 className="font-bold sm:text-[3rem] xs:text-[2rem] lg:text-start xs:text-center">What Our Customer Say's</h1>
+
+            <p className="font-serif sm:w-auto xs:w-[15rem] lg:text-start xs:text-center mx-auto text-slate-600">Barber Trading Style and Proven Strategy to Make a Living</p>
+
+            <button className="font-bold mt-10 w-fit left-0 px-[2rem] py-[1rem] sm:mx-0 xs:mx-auto text-[#b48e40] border border-[#b48e40]">WRITE REVIEW <span className="font-bold">{'>>'}</span></button>
+          </div>
+
+          <div className="flex lg:flex-nowrap xs:flex-wrap gap-y-8 gap-x-4">
+            {reviews.map((review, index) => (
+              <div key={`review_${index + 1}`} className="flex flex-col lg:px-4 sm:px-8 xs:px-4 py-10 mx-auto border border-slate-400">
+                <Image src={review.image} alt={`${review.name}_review`} className="mx-auto" />
+                <p className="font-serif mt-5 text-center w-[15rem]">Proin vel ipsum id risus ultrices scelerisque. Suspendisse mattis sit amet leo vel convallis.</p>
+
+                <div className='flex w-fit mx-auto mt-6 gap-x-1'>
+                  {Array.from({ length: 5 }).map((value, i) => (
+                    <i key={`star_${i + 1}`} className={`pi pi-star-fill ${i === 4 ? 'text-slate-300' : 'text-[#b48e40]'} `} />
+                  ))}
+                </div>
+                <p className="w-fit mx-auto font-bold text-[20px]">{review.name}</p>
+
+                <p className="mt-4 w-fit mx-auto text-[14px]">Regular User</p>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      <section className="flex flex-col">
+        <p className="text-[#b48e40] font-bold w-fit mx-auto text-[20px]">Blog And Article</p>
+        <h1 className="font-bold sm:text-[3rem] xs:text-[1.5rem] w-fit mx-auto">Read Our Blog and News</h1>
+
+        <div className="flex flex-wrap gap-y-4 mt-10 gap-x-4 lg:w-fit md:w-[42rem] xs:w-[20rem] mx-auto">
+
+          {blogs.map((blog, blog_index) => (
+            <div key={`blog_${blog_index+1}`} className="flex flex-col pb-8 border border-slate-400">
+              <Image src={blog.image} alt={`blog_${blog_index+1}`} className="w-[20rem] cursor-pointer" />
+
+              <div className="flex items-center gap-x-2 mt-8 w-[16rem] mx-auto">
+                <button className="px-2.5 py-1 bg-[#b48e40] text-white font-bold">{blog.label}</button>
+                <CalendarMonthOutlinedIcon className="text-[#b48e40] text-[1.2rem]" />
+                <p className="items-center mt-1 font-bold hover:text-[#b48e40] cursor-pointer">{blog.date}</p>
+              </div>
+
+              <h1 className="w-[16rem] text-[20px] font-bold mt-4 mx-auto cursor-pointer hover:text-[#b48e40]">{blog.text}</h1>
+
+              <button className="mt-4 ml-8 text-start w-fit font-bold">READ MORE <span className="font-bold">{`>>`}</span></button>
+            </div>
+          ))}
 
         </div>
       </section>
