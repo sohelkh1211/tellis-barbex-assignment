@@ -120,7 +120,7 @@ export default function Home() {
           <div className="flex justify-center xs:pr-[25%] sm:pr-0">
             <Image src={about1} alt="about1" className="flex sm:w-[22rem] xs:w-[12rem]" />
             <Image src={about2} alt="about2" className="absolute flex sm:w-[9rem] xs:w-[7rem] sm:ml-[26rem] xs:ml-[16rem] sm:mt-[2rem] xs:mt-[1rem]" />
-            <Image src={about3} alt className="absolute flex sm:w-[20rem] xs:w-[10rem] sm:ml-[17rem] xs:ml-[10rem] sm:mt-[16rem] xs:mt-[10rem] sm:border-[15px] xs:border-[10px] border-white" />
+            <Image src={about3} alt="about3" className="absolute flex sm:w-[20rem] xs:w-[10rem] sm:ml-[17rem] xs:ml-[10rem] sm:mt-[16rem] xs:mt-[10rem] sm:border-[15px] xs:border-[10px] border-white" />
           </div>
 
           <div className="flex flex-col w-fit mx-auto">
